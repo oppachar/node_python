@@ -2,8 +2,7 @@ import dlib
 import cv2
 import numpy as np
 from face_detection import image
-from face_detection import ALL, RIGHT_EYEBROW, LEFT_EYEBROW, RIGHT_EYE, LEFT_EYE, NOSE, MOUTH_INNER, MOUTH_OUTLINE, JAWLINE
-from face_detection import list_points, center, low
+from face_detection import *
 from hairline_detection import hair_line_point
 import json
 
@@ -123,3 +122,4 @@ else :
 '''cv2.imshow("result", image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()'''
+print("Hello world_test")

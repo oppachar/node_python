@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
   let dataToSend
   let largeDataSet = []
 
-  const python = spawn('python', ['face_recongition/features.py'])
+  const python = spawn('python', ['test.py'])
 
   python.stdout.on('data', function (data){
     console.log('Pipe data from python script ...')

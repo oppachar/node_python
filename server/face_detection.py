@@ -2,6 +2,7 @@ import dlib
 import cv2
 import numpy as np
 import imutils
+import json
 
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
@@ -47,6 +48,7 @@ p = (list_points[NOSE][0]+list_points[RIGHT_EYEBROW][4])/2 +1
 center = (list_points[NOSE][6]-p)[1]
 low = (list_points[JAWLINE][8]-list_points[NOSE][6])[1]
 
-cv2.imshow("Output", image)
+'''cv2.imshow("Output", image)
 cv2.waitKey(0)
-cv2.destroyAllWindows()
+cv2.destroyAllWindows()'''
+
