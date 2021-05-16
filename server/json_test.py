@@ -1,27 +1,27 @@
 import json
-from features import *
+from result import *
 
-up = str(upper_ratio)
-center = str(center_ratio)
-low = str(lower_ratio)
+faceline_index = str(faceline_index)
+up = str(up)
+center = str(center)
+low = str(low)
+ratio = str(ratio)
+cheek_side = str(cheek_side)
+cheek_front = str(cheek_front)
 
-data1 = {
+analysis = {
     "FaceAnalysis": [
         {
-            "Major": "Statistics", 
-            "Ratio": [up, 
+            "Faceline": faceline_index, 
+            "Ratio": [  ratio,
+                        up, 
                         center, 
-                        low]
-        }, 
-        {
-            "Minor": "ComputerScience", 
-            "Classes": ["Data Structure", 
-                        "Programming", 
-                        "Algorithms"]
+                        low],
+            "Cheek": [  cheek_front, 
+                        cheek_front]
         }
     ]
 } 
 
 with open("test_file.json", "w") as json_file:
-
-    json.dump(data1, json_file)
+    json.dump(analysis, json_file)
