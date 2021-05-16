@@ -1,19 +1,17 @@
 import json
-from face_detection import *
+from features import *
 
-low = str(low);
+up = str(upper_ratio)
+center = str(center_ratio)
+low = str(lower_ratio)
 
-student_data = {
-    "1.low": low,
-    "2.LastName": "Hong",
-    "3.Age": 20, 
-    "4.University": "Yonsei University",
-    "5.Courses": [
+data1 = {
+    "FaceAnalysis": [
         {
             "Major": "Statistics", 
-            "Classes": ["Probability", 
-                        "Generalized Linear Model", 
-                        "Categorical Data Analysis"]
+            "Ratio": [up, 
+                        center, 
+                        low]
         }, 
         {
             "Minor": "ComputerScience", 
@@ -24,6 +22,6 @@ student_data = {
     ]
 } 
 
-with open("student_file.json", "w") as json_file:
+with open("test_file.json", "w") as json_file:
 
-    json.dump(student_data, json_file)
+    json.dump(data1, json_file)
